@@ -208,25 +208,28 @@ footer{
 </div>
 
 <script type="module">
-// TAMBAHAN: Import Firebase SDK v12.7.0
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
-import { getDatabase, ref, set, onValue, push, get } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-database.js";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAcA7CYQqoig7eVaMbopIQpq9EWn1mVudA",
-  authDomain: "iot-phi.firebaseapp.com",
-  databaseURL: "https://iot-phi-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "iot-phi",
-  storageBucket: "iot-phi.firebasestorage.app",
-  messagingSenderId: "284686032428",
-  appId: "1:284686032428:web:82bec581d6c9d1a3193b89",
-  measurementId: "G-HWD5C417GN"
+  apiKey: "AIzaSyAs_EjizpX2klf1BuzmxXsH6mc6qizvlwQ",
+  authDomain: "counter-iot-phi.firebaseapp.com",
+  databaseURL: "https://counter-iot-phi-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "counter-iot-phi",
+  storageBucket: "counter-iot-phi.firebasestorage.app",
+  messagingSenderId: "93383053218",
+  appId: "1:93383053218:web:efca28132c3e925a866cfb",
+  measurementId: "G-JD3JWEMDP6"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+const analytics = getAnalytics(app);
 
 /* ================= LOGIN ================= */
 function doLogin(){
